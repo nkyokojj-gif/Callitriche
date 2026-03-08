@@ -4,22 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callitriche</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="" href="">
+    <link rel="stylesheet" href="css/top_css.css">
+    <link rel="shortcut icon" href="assets/img/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Quattrocento:wght@400;700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="flex">
-            <h1 class="title">Callitriche</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">製品</a></li>
-                    <li><a href="#">会社</a></li>
+    <header class="header">
+        <div class="heaer flex">
+            <h1 class="header__title title">Callitriche</h1>
+            <nav class="nav">
+                <ul class="header__nav">
+                    <li class="header__nav--list"><a href="#">ホーム</a></li>
+                    <li class="header__nav--list"><a href="#">お悩み</a></li>
+                    <li class="header__nav--list"><a href="#product">商品</a></li>
+                    <li class="header__nav--list"><a href="#explanation">商品の特徴</a></li>
+                    <li class="header__nav--list"><a href="#">使用方法</a></li>
+                    <li class="header__nav--list"><a href="#component">成分表示</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,52 +33,74 @@
 
     <main>
         <section class="main-visual">
-            <figure class="main-image"><img src="" alt=""></figure>
+                <figure class="main-img"><img src="assets/img/ingmar-qGzd3axRSF4-unsplash.jpg" alt="森の写真"></figure>
         </section>
-        <section class="promotion">
-            <h3 class="promotion__title">忙しさの中で忘れがちな“自分”を、髪から整える</h3>
-            <p>日々戦う女性たちへ。<span>自分の時間をあまり取れず髪のパサつき、まとまらない、、そんな悩みはありませんか？</span></p>
-        </section>
-        <section class="product">
-            <div class="flex">
-                <img src="" alt="ヘアオイルの写真">
-                <div class="product__content">
-                    <p>商品名</p>
-                    <p>ヘアオイル</p>
-                    <a href="#">購入ボタン</a>
+        <div class="inner">
+            <section class="promotion">
+                <h3 class="promotion__title title">忙しさの中で忘れがちな“自分”を、髪から整える</h3>
+                <p class="promotion__text">日々戦うあなたに。<br>長時間乾燥や紫外線を浴びる、仕事で長時間髪を縛る、普段忙しくて髪のケアができていない...<br>
+                思い当たったあなたはとっても頑張り屋さん。<br>日々の忙しさの中で忘れがちな自分を、髪のケアとともに整えませんか？</p>
+            </section>
+            <section id="product">
+                <div class="product flex">
+                    <figure class="product__img"><img src="assets/img/pexels-ron-lach-8131585.jpg" alt="ヘアオイルの写真"></figure>
+                    <div class="product__content">
+                        <p>ヘアオイル</p>
+                        <p>カリトリケ　ヘアオイル</p>
+                        <p>本体　￥3200（税込）</p>
+                        <p>160mL</p>
+                        <a href="#" class="product__btn btn">購入する</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="explanation">
-            <h3 class="explanation__title">商品の特徴</h3>
-                <ul>
-                    <li>自然由来の原料を使用し髪を保湿し、潤いと艶を与える</li>
-                    <li>摩擦や紫外線から髪を保護する</li>
-                    <li>●●の香りでストレスの軽減、リラックスを促す</li>
-                </ul>
-            <h3 class="explanation__title">使用方法</h3>
-                <ol>
-                    <li>お風呂上がりの濡れた髪に本製品を2プッシュほど、毛先を中心になじませる</li>
-                    <li>ドライヤーで髪を乾かす</li>
-                    <li></li>
-                </ol>
-            <div class="flex">
-                <img src="" alt="イメージ図・写真">
-                <img src="" alt="イメージ図・写真">
-            </div>
-        </section>
-        <section class="component">
-            <h3 class="component__title">成分情報</h3>
-            <p>表を入れる？</p>
-        </section>
+            </section>
+            <section id="explanation">
+                <h3 class="explanation__title title">商品の特徴</h3>
+                    <ul>
+                        <li class="explanation__text">・自然由来の原料を使用し髪を保湿し、潤いと艶を与える</li>
+                        <li class="explanation__text">・摩擦や紫外線から髪を保護する</li>
+                        <li class="explanation__text">・爽やかな果物の香りと癒しのフローラルの香りでストレスの軽減、リラックスを促す</li>
+                    </ul>
+                <h3 class="explanation__title title">使用方法</h3>
+                    <ol>
+                        <li class="explanation__text">お風呂上がりの濡れた髪に本製品を500円玉ほどの大きさで手に取り、毛先を中心に髪全体になじませる</li>
+                        <li class="explanation__text">ドライヤーで髪を乾かす</li>
+                    </ol>
+                <div class="explanation flex">
+                    <figure class="explanation__img"><img src="assets/img/christin-hume-0MoF-Fe0w0A-unsplash.jpg" alt="イメージ図・写真"></figure>
+                    <figure class="explanation__img"><img src="assets/img/pexels-shiny-diamond-3762879.jpg" alt="イメージ図・写真"></figure>
+                </div>
+            </section>
+            <section id="component">
+                <h3 class="component__title title">成分情報</h3>
+                <p>表を入れる？</p>
+            </section>
+            <section class="productsec">
+                <div class="productsec__flex">
+                    <figure class="productsec__img"><img src="assets/img/pexels-ron-lach-8131585.jpg" alt="ヘアオイルの写真"></figure>
+                    <div class="productsec__content">
+                        <p>ヘアオイル</p>
+                        <p>カリトリケ　ヘアオイル</p>
+                        <p>本体　￥3200（税込）</p>
+                        <p>160mL</p>
+                        <a href="#" class="productsec__btn btn">購入ボタン</a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <nav>
+            <div class="footer flex">
             <ul>
                 <li><a href="#">ホーム</a></li>
+                <li><a href="#">お悩み</a></li>
                 <li><a href="#">商品</a></li>
-                <li><a href="#">会社</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">商品の特徴</a></li>
+                <li><a href="#">使用方法</a></li>
+                <li><a href="#">成分表示</a></li>
             </ul>
         </nav>
         <div class="copyright">
