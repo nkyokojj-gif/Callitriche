@@ -117,6 +117,47 @@
         </div>
 
     </footer>
+    <script>
+        const productIdInput = document.getElementById("productId");
+        const quantityInput = document.getElementById("quantity");
+        const result = document.getElementById("result");
+
+        // 保存
+        document.getElementById("saveButton").addEventListener("click", function () {
+            const productId = productIdInput.value;
+            const quantity = quantityInput.value;
+
+            if (quantity === "" || Number(quantity) <= 0) {
+                result.textContent = "1以上の個数を入力してください";
+                return;
+            }
+
+            const productData = {
+                productId: productId,
+                quantity: Number(quantity)
+            };
+
+            localStorage.setItem("productOrder", JSON.stringify(productData));
+            result.textContent = "保存しました: " + JSON.stringify(productData);
+        });
+
+        // 読込
+        document.getElementById("loadButton").addEventListener("click", function () {
+            const savedData = localStorage.getItem("productOrder");
+
+            if (!savedData) {
+                result.textContent = "保存データがありません";
+                return;
+            }
+
+            const productData = JSON.parse(savedData);
+
+            productIdInput.value = productData.productId;
+            quantityInput.value = productData.quantity;
+
+            result.textContent = "読み込みました: " + JSON.stringify(productData);
+        });
+    </script>
 </body>
 
 </html>
