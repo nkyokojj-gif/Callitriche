@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>カート画面</title>
+</head>
+
+<body>
+    <h1>カートの中身</h1>
+
+    <!--
+    商品IDを表示する場所です。
+    JavaScriptで localStorage から値を取り出して、ここに表示します。
+  -->
+    <p>商品ID: <span id="productId"></span></p>
+
+    <!--
+    商品名を表示する場所です。
+  -->
+    <p>商品名: <span id="productName"></span></p>
+
+    <!--
+    単価を表示する場所です。
+  -->
+    <p>単価: <span id="price"></span>円</p>
+
+    <!--
+    数量表示エリアです。
+    数字は直接入力させず、span に表示だけします。
+    数量の変更は「－」「＋」ボタンで行います。
+  -->
+    <p>
+        数量:
+        <button id="minusButton">－</button>
+        <span id="quantity"></span>
+        <button id="plusButton">＋</button>
+    </p>
+
+    <!--
+    合計金額を表示する場所です。
+    「単価 × 数量」で計算した結果を表示します。
+  -->
+    <p>合計金額: <span id="totalPrice"></span>円</p>
+
+    <script>
+        // -----------------------------------
+        // 1. HTMLの要素を取得する
+        // -----------------------------------
+        // 画面に値を表示するために、spanタグやbuttonタグを取得しています。
+
+        // 商品IDを表示する span
+        const productIdSpan = document.getElementById("productId");
+
+        // 商品名を表示する span
+        const productNameSpan = document.getElementById("productName");
+
+        // 単価を表示する span
+        const priceSpan = document.getElementById("price");
+
+        // 数量を表示する span
+        const quantitySpan = document.getElementById("quantity");
+
+        // 合計金額を表示する span
+        const totalPriceSpan = document.getElementById("totalPrice");
+
+        // 数量を減らすボタン
+        const minusButton = document.getElementById("minusButton");
+
+        // 数量を増やすボタン
+        const plusButton = document.getElementById("plusButton");
+
+
+        // -----------------------------------
+        // 2. localStorage に保存するときのキー名
+        // -----------------------------------
+        // localStorage は「キー名」と「値」のセットで保存します。
+        // 今回はキー名を goodsOrder にしています。
+        const STORAGE_KEY = "goodsOrder";
+
+
+        // -----------------------------------
+        // 3. 初回だけサンプルデータを保存する
+        // -----------------------------------
+        // まだ localStorage に goodsOrder がない場合だけ、
+        // 最初のサンプルデータを保存します。
+        //
+        // すでに保存済みであれば、この処理は実行されません。
+        if (!localStorage.getItem(STORAGE_KEY)) {
+            const defaultProduct = {
+                productId: "P001",
+                productName: "ノートパソコン",
+                price: 5000,
+                quantity: 2
+            };
+
+            // localStorage には文字列しか保存できないので
+            // JSON.stringify() で文字列に変換して保存します
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultProduct));
+        }
+
+
+        // -----------------------------------
+        // 4. localStorage から商品データを取得する関数
+        // -----------------------------------
+        function getProductData() {
+            // localStorage から goodsOrder の値を取得する
+            const savedData = localStorage.getItem(STORAGE_KEY);
+
+            // 取得したデータは文字列なので、
+            // JSON.parse() を使って元のオブジェクトに戻す
+            return JSON.parse(savedData);
+        }
+
+
+        // -----------------------------------
+        // 5. localStorage に商品データを保存する関数
+        // -----------------------------------
+        function saveProductData(productData) {
+            // JavaScriptのオブジェクトを
+            // JSON文字列に変換して保存する
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(productData));
+        }
+
+
+        // -----------------------------------
+        // 6. 画面表示を更新する関数
+        // -----------------------------------
+        function renderCart() {
+            // 最新のデータを localStorage から取得する
+            const productData = getProductData();
+
+            // 商品IDを画面に表示
+            productIdSpan.textContent = productData.productId;
+
+            // 商品名を画面に表示
+            productNameSpan.textContent = productData.productName;
+
+            // 単価を画面に表示
+            priceSpan.textContent = productData.price;
+
+            // 数量を画面に表示
+            quantitySpan.textContent = productData.quantity;
+
+            // 合計金額を計算する
+            // 単価 × 数量
+            const totalPrice = productData.price * productData.quantity;
+
+            // 合計金額を画面に表示
+            totalPriceSpan.textContent = totalPrice;
+        }
+
+
+        // -----------------------------------
+        // 7. ＋ボタンを押したときの処理
+        // -----------------------------------
+        plusButton.addEventListener("click", function () {
+            // 現在の保存データを取得する
+            const productData = getProductData();
+
+            // 数量を1増やす
+            productData.quantity = productData.quantity + 1;
+
+            // 増やしたあとのデータを localStorage に保存し直す
+            saveProductData(productData);
+
+            // 画面表示も最新状態に更新する
+            renderCart();
+        });
+
+
+        // -----------------------------------
+        // 8. －ボタンを押したときの処理
+        // -----------------------------------
+        minusButton.addEventListener("click", function () {
+            // 現在の保存データを取得する
+            const productData = getProductData();
+
+            // 数量が1より大きいときだけ減らす
+            // 1未満にならないようにするためのチェックです
+            if (productData.quantity > 1) {
+                // 数量を1減らす
+                productData.quantity = productData.quantity - 1;
+
+                // 減らしたあとのデータを localStorage に保存し直す
+                saveProductData(productData);
+
+                // 画面表示も最新状態に更新する
+                renderCart();
+            }
+        });
+
+
+        // -----------------------------------
+        // 9. ページを開いたときに最初の表示を行う
+        // -----------------------------------
+        renderCart();
+    </script>
+</body>
+
+</html>
