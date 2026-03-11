@@ -27,14 +27,14 @@ img {
 
 p {
     color: #333;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 a {
     text-decoration: none;
     color: #F2F0EB;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 ul {
@@ -183,6 +183,16 @@ ul {
     margin-top: 20px;
     height: 300px;
     object-fit: cover;
+}
+
+/* 成分 */
+.component__info{
+    display: flex;
+}
+
+
+.component__info--title{
+    width: 150px;
 }
 
 
