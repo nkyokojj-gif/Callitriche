@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callitriche</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/pages/top.css">
     <link rel="shortcut icon" href="assets/img/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,11 +62,16 @@
             </section>
             <section id="explanation">
                 <h3 class="explanation__title title">商品の特徴</h3>
-                <ul>
-                    <li class="explanation__text">・自然由来の原料を使用し髪を保湿し、潤いと艶を与える</li>
-                    <li class="explanation__text">・摩擦や紫外線から髪を保護する</li>
-                    <li class="explanation__text">・爽やかな果物の香りと癒しのフローラルの香りでストレスの軽減、リラックスを促す</li>
-                </ul>
+                <!-- Slider main container -->
+                <div class="swiper">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">自然由来の原料を使用し髪を保湿し、潤いと艶を与える</div>
+                        <div class="swiper-slide">摩擦や紫外線から髪を保護する</div>
+                        <div class="swiper-slide">爽やかな果物の香りと癒しのフローラルの香りでストレスの軽減、リラックスを促す</div>
+                    </div>
+                </div>
                 <h3 class="explanation__title title">使用方法</h3>
                 <ol>
                     <li class="explanation__text">お風呂上がりの濡れた髪に本製品を500円玉ほどの大きさで手に取り、毛先を中心に髪全体になじませる</li>
@@ -186,6 +191,7 @@
             result.textContent = "読み込みました: " + JSON.stringify(productData);
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -177,6 +177,11 @@ ul {
     font-size: 20px;
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 
 
 .explanation__img img{
