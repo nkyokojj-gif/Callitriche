@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callitriche</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="assets/css/pages/top.css">
+    <link rel="stylesheet" href="assets/css/pages/cart.css">
+    <link rel="shortcut icon" href="assets/img/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Quattrocento:wght@400;700&family=Zen+Kaku+Gothic+New&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="heaer flex">
+            <h1 class="header__title title">Callitriche</h1>
+            <nav class="nav">
+                <ul class="header__nav">
+                    <li class="header__nav--list"><a href="#">ホーム</a></li>
+                    <li class="header__nav--list"><a href="#">お悩み</a></li>
+                    <li class="header__nav--list"><a href="#product">商品</a></li>
+                    <li class="header__nav--list"><a href="#explanation">商品の特徴</a></li>
+                    <li class="header__nav--list"><a href="#">使用方法</a></li>
+                    <li class="header__nav--list"><a href="#component">成分表示</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="flex">
+            <h2 class="cart__title">カート内情報</h2>
+            <div>
+                <p>商品</p>
+                <p>個数</p>
+                <p>値段</p>
+            </div>
+        </div>
+        <div>
+            <img src="" alt="カートに入れた商品の写真">
+            <p>商品</p>
+            <p>個数</p>
+            <p>値段</p>
+        </div>
+        <div class="buy">
+            <h2 class="buy__title">購入者情報の入力</h2>
+            <div class="form__item">
+                <form action="#" method="post" class="form__container">
+                    <dl class="form">
+                        <dt>
+                            <label for="name" class="required">お名前</label>
+                        </dt>
+                        <dd>
+                            <input type="text" id="name" name="your-name" placeholder="例）田中 花子">
+                        </dd>
+                        <dt>
+                            <label for="postnum" class="required">郵便番号</label>
+                        </dt>
+                        <dd>
+                            <input type="text" id="postnum" name="your-postnum" placeholder="例）000">
+                            <input type="text" id="postnum" name="your-postnum" placeholder="例）0000">
+                        </dd>
+                        <dt>
+                            <label for="adress" class="required">住所</label>
+                        </dt>
+                        <dd>
+                            都道府県<input type="text" id="postnum" name="your-postnum">
+                        </dd>
+                        <dd>
+                            市区町村<input type="text" id="postnum" name="your-postnum">
+                        </dd>
+                        <dd>
+                            番地以降<input type="text" id="postnum" name="your-postnum">
+                        </dd>
+                        <dd>
+                            マンション・建物名<input type="text" id="postnum" name="your-postnum">
+                        </dd>
+                        <dt>
+                            <label for="tel" class="required">電話番号</label>
+                        </dt>
+                        <dd>
+                            <input type="tel" id="tel" name="your-tel" placeholder="00000000000">
+                        </dd>
+                        <dt>
+                            <label for="email" class="required">メールアドレス</label>
+                        </dt>
+                        <dd>
+                            <input type="email" id="email" name="your-email" placeholder="hanako@">
+                        </dd>
+                        <dt>
+                            <label for="payment">支払い方法</label>
+                        </dt>
+                        <dd>
+                            <input type="radio" id="payment" name="payment" value="card">クレジットカード
+                        </dd>
+                        <dd>
+                            <input type="radio" id="payment" name="payment" value="bank">銀行振込
+                        </dd>
+                        <dd>
+                            <input type="radio" id="payment" name="payment" value="convenience">コンビニ支払い
+                        </dd>
+                    </dl>
+                    <div class="form__btn">
+                        <a href="cart.html" class="form__btn--back">前の画面に戻る</a>
+                        <input type="submit" value="注文を確定する">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <nav>
+            <div class="footer flex">
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">お悩み</a></li>
+                    <li><a href="#">商品</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">商品の特徴</a></li>
+                    <li><a href="#">使用方法</a></li>
+                    <li><a href="#">成分表示</a></li>
+                </ul>
+        </nav>
+        <div class="copyright">
+            <small class="copyright-text">©Callitriche</small>
+        </div>
+
+    </footer>
+</body>

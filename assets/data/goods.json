@@ -3,5 +3,10 @@
     "productId": "P001",
     "productName": "オイル",
     "price": 5000
+  },
+  {
+    "productId": "P002",
+    "productName": "化粧水",
+    "price": 3000
   }
 ]

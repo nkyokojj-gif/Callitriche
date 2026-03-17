@@ -37,23 +37,31 @@
         </div>
     </header>
     <main>
-        <h2 class="cart__title">カート内情報</h2>
-        <div>
-            <p>商品</p>
-            <p>個数</p>
-            <p>値段</p>
+        <div class="flex">
+            <h2 class="cart__title">カート内情報</h2>
+            <div>
+                <p>商品</p>
+                <p>個数</p>
+                <p>値段</p>
+            </div>
         </div>
         <div>
             <img src="" alt="カートに入れた商品の写真">
             <p>商品</p>
             <p>個数</p>
+            　　<div>
+                    <button type="button" class="productsec__btn--minus" onclick="changeQuantisy(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="999" readonly>
+                    <button type="button" class="productsec__btn--plus" onclick="changeQuantisy(1)">+</button>
+                </div>
             <p>値段</p>
         </div>
 
-        <p>購入はまだ完了していません</p>
+        <p>カートの内容をご確認ください<br>
+        この時点では注文は確定していません。次のページで配送先と決済方法をご選択いただけます</p>
 
-        <a href="#" class="product__btn btn">買い物を続ける</a>
-        <a href="#" class="product__btn btn">購入情報入力へ</a>
+        <a href="top.html" class="product__btn btn">買い物を続ける</a>
+        <a href="checkout.html" class="product__btn btn">購入情報入力へ</a>
     </main>
     <footer class="footer">
         <nav>
@@ -61,7 +69,7 @@
                 <ul>
                     <li><a href="#">ホーム</a></li>
                     <li><a href="#">お悩み</a></li>
-                    <li><a href="#">商品</a></li>
+                    <li><a href="#">商品</a></li>　
                 </ul>
                 <ul>
                     <li><a href="#">商品の特徴</a></li>

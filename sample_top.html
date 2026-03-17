@@ -61,12 +61,12 @@
         const STORAGE_KEY = "goodsOrder";
 
         // -----------------------------------
-        // 3. JSONから読み込んだ商品情報を入れておく変数
+        // 3. JSONから読み込んだ商品情報を入れておく変数(ここまではやる)
         // -----------------------------------
         let productDataFromJson = null;
 
         // -----------------------------------
-        // 4. JSONファイルを読み込む
+        // 4. JSONファイルを読み込む（丸コピー）
         // -----------------------------------
         // goods.json を fetch で取得します
         fetch("assets/data/goods.json")
@@ -81,7 +81,7 @@
             })
             .then(function (products) {
                 // 今回は1件目の商品を使う
-                const product = products[0];
+                const product = products[1];
 
                 // 読み込んだ商品情報を変数に保存しておく
                 productDataFromJson = product;
