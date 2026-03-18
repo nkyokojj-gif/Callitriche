@@ -81,6 +81,7 @@ ul {
 
 .header .flex{
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__title{
