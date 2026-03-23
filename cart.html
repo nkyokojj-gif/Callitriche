@@ -22,64 +22,265 @@
 
 <body>
     <header class="header">
-        <div class="heaer flex">
+        <div class="header__flex flex">
             <h1 class="header__title title">Callitriche</h1>
             <nav class="nav">
                 <ul class="header__nav">
-                    <li class="header__nav--list"><a href="#">ホーム</a></li>
-                    <li class="header__nav--list"><a href="#">お悩み</a></li>
-                    <li class="header__nav--list"><a href="#product">商品</a></li>
-                    <li class="header__nav--list"><a href="#explanation">商品の特徴</a></li>
-                    <li class="header__nav--list"><a href="#">使用方法</a></li>
-                    <li class="header__nav--list"><a href="#component">成分表示</a></li>
+                    <li class="header__nav--list"><a href="top.html#">ホーム</a></li>
+                    <li class="header__nav--list"><a href="top.html#product">商品</a></li>
+                    <li class="header__nav--list"><a href="top.html#explanation">商品の特徴</a></li>
+                    <li class="header__nav--list"><a href="top.html#">使用方法</a></li>
+                    <li class="header__nav--list"><a href="top.html#component">成分表示</a></li>
                 </ul>
             </nav>
         </div>
+
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="top.html#">ホーム</a></li>
+                    <li><a href="top.html#product">商品</a></li>
+                    <li><a href="top.html#explanation#">商品の特徴</a></li>
+                    <li><a href="top.html#use">使用方法</a></li>
+                    <li><a href="top.html#component">成分表示</a></li>
+                </ul>
+            </div>
+            <div class="background-image"></div>
+        </div>
     </header>
+
     <main>
-        <div class="flex">
-            <h2 class="cart__title">カート内情報</h2>
-            <div>
-                <p>商品</p>
-                <p>個数</p>
-                <p>値段</p>
+        <div class="inner">
+            <h2 class="cart__title title">カート内情報</h2>
+            <div class="cart__flex flex">
+                <div class="cart">
+                    <img id="productImage" alt="カートに入れた商品の写真" style="width:300px;">
+                </div>
+                <div class="cart__wrapper">
+
+    <!--商品IDを表示する場所です。
+    JavaScriptで localStorage から値を取り出して、ここに表示します。-->
+                    <p>商品ID: <span id="productId"></span></p>
+
+    <!--
+    商品名を表示する場所です。
+  -->
+                    <p>商品名: <span id="productName"></span></p>
+
+    <!--
+    単価を表示する場所です。
+  -->
+                    <p>単価: <span id="price"></span>円</p>
+
+    <!--
+    数量表示エリアです。
+    数字は直接入力させず、span に表示だけします。
+    数量の変更は「－」「＋」ボタンで行います。
+  -->
+                    <p>
+                        数量:<span id="quantity"></span>
+                        <button id="plusButton">＋</button>
+                        <button id="minusButton">－</button>
+                    </p>
+
+    <!--
+    合計金額を表示する場所です。
+    「単価 × 数量」で計算した結果を表示します。
+  -->
+                    <p class="totalprice">合計金額: <span id="totalPrice"></span>円</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <p class="wrapper__text">カートの内容をご確認ください<br>
+                この時点では注文は確定していません。次のページで配送先と決済方法をご選択いただけます</p>
+            </div>
+            <div class="cart__btn">
+                <div class="cart__btn--flex flex">
+                    <a href="top.html" class="product__btn btn">買い物を続ける</a>
+                    <a href="checkout.html" class="product__btn btn">購入情報入力へ</a>
+                </div>
             </div>
         </div>
-        <div>
-            <img src="" alt="カートに入れた商品の写真">
-            <p>商品</p>
-            <p>個数</p>
-            　　<div>
-                    <button type="button" class="productsec__btn--minus" onclick="changeQuantisy(-1)">-</button>
-                    <input type="number" id="quantity" value="1" min="1" max="999" readonly>
-                    <button type="button" class="productsec__btn--plus" onclick="changeQuantisy(1)">+</button>
-                </div>
-            <p>値段</p>
-        </div>
-
-        <p>カートの内容をご確認ください<br>
-        この時点では注文は確定していません。次のページで配送先と決済方法をご選択いただけます</p>
-
-        <a href="top.html" class="product__btn btn">買い物を続ける</a>
-        <a href="checkout.html" class="product__btn btn">購入情報入力へ</a>
     </main>
     <footer class="footer">
         <nav>
             <div class="footer flex">
                 <ul>
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">お悩み</a></li>
-                    <li><a href="#">商品</a></li>　
+                    <li class="footer__list"><a href="top.html#">ホーム</a></li>
+                    <li class="footer__list"><a href="top.html#product">商品</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">商品の特徴</a></li>
-                    <li><a href="#">使用方法</a></li>
-                    <li><a href="#">成分表示</a></li>
+                    <li class="footer__list"><a href="top.html#explanation">商品の特徴</a></li>
+                    <li class="footer__list"><a href="top.html#use">使用方法</a></li>
+                    <li class="footer__list"><a href="top.html#component">成分表示</a></li>
                 </ul>
+            </div>
         </nav>
         <div class="copyright">
             <small class="copyright-text">©Callitriche</small>
         </div>
 
     </footer>
+
+    <script>
+        // -----------------------------------
+        // 1. HTMLの要素を取得する
+        // -----------------------------------
+        // 画面に値を表示するために、spanタグやbuttonタグを取得しています。
+
+        // 商品IDを表示する span
+        const productIdSpan = document.getElementById("productId");
+
+        // 商品名を表示する span
+        const productNameSpan = document.getElementById("productName");
+
+        // 単価を表示する span
+        const priceSpan = document.getElementById("price");
+
+        // 数量を表示する span
+        const quantitySpan = document.getElementById("quantity");
+
+        // 合計金額を表示する span
+        const totalPriceSpan = document.getElementById("totalPrice");
+
+        // 数量を減らすボタン
+        const minusButton = document.getElementById("minusButton");
+
+        // 数量を増やすボタン
+        const plusButton = document.getElementById("plusButton");
+
+        // 商品のイメージ画像を取得
+        const productImage = document.getElementById("productImage");
+
+
+        // -----------------------------------
+        // 2. localStorage に保存するときのキー名
+        // -----------------------------------
+        // localStorage は「キー名」と「値」のセットで保存します。
+        // 今回はキー名を goodsOrder にしています。
+        const STORAGE_KEY = "goodsOrder";
+
+
+        // -----------------------------------
+        // 3. 初回だけサンプルデータを保存する
+        // -----------------------------------
+        // まだ localStorage に goodsOrder がない場合だけ、
+        // 最初のサンプルデータを保存します。
+        //
+        // すでに保存済みであれば、この処理は実行されません。
+        // if (!localStorage.getItem(STORAGE_KEY)) {
+            // const defaultProduct = {
+                // productId: "P001",
+                // productName: "ノートパソコン",
+                // price: 5000,
+                // quantity: 2
+            // };
+
+            // localStorage には文字列しか保存できないので
+            // JSON.stringify() で文字列に変換して保存します
+            // localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultProduct));
+
+
+        // -----------------------------------
+        // 4. localStorage から商品データを取得する関数
+        // -----------------------------------
+        function getProductData() {
+            // localStorage から goodsOrder の値を取得する
+            const savedData = localStorage.getItem(STORAGE_KEY);
+
+            // 取得したデータは文字列なので、
+            // JSON.parse() を使って元のオブジェクトに戻す
+            return JSON.parse(savedData);
+        }
+
+
+        // -----------------------------------
+        // 5. localStorage に商品データを保存する関数
+        // -----------------------------------
+        function saveProductData(productData) {
+            // JavaScriptのオブジェクトを
+            // JSON文字列に変換して保存する
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(productData));
+        }
+
+
+        // -----------------------------------
+        // 6. 画面表示を更新する関数
+        // -----------------------------------
+        function renderCart() {
+            // 最新のデータを localStorage から取得する
+            const productData = getProductData();
+
+            // 商品IDを画面に表示
+            productIdSpan.textContent = productData.productId;
+
+            // 商品名を画面に表示
+            productNameSpan.textContent = productData.productName;
+
+            // 単価を画面に表示
+            priceSpan.textContent = productData.price;
+
+            // 数量を画面に表示
+            quantitySpan.textContent = productData.quantity;
+
+            // 合計金額を計算する
+            // 単価 × 数量
+            const totalPrice = productData.price * productData.quantity;
+
+            // 合計金額を画面に表示
+            totalPriceSpan.textContent = totalPrice;
+
+            // 画像の情報を取得
+            productImage.src = productData.image;
+        }
+
+
+        // -----------------------------------
+        // 7. ＋ボタンを押したときの処理
+        // -----------------------------------
+        plusButton.addEventListener("click", function () {
+            // 現在の保存データを取得する
+            const productData = getProductData();
+
+            // 数量を1増やす
+            productData.quantity = productData.quantity + 1;
+
+            // 増やしたあとのデータを localStorage に保存し直す
+            saveProductData(productData);
+
+            // 画面表示も最新状態に更新する
+            renderCart();
+        });
+
+
+        // -----------------------------------
+        // 8. －ボタンを押したときの処理
+        // -----------------------------------
+        minusButton.addEventListener("click", function () {
+            // 現在の保存データを取得する
+            const productData = getProductData();
+
+            // 数量が1より大きいときだけ減らす
+            // 1未満にならないようにするためのチェックです
+            if (productData.quantity > 1) {
+                // 数量を1減らす
+                productData.quantity = productData.quantity - 1;
+
+                // 減らしたあとのデータを localStorage に保存し直す
+                saveProductData(productData);
+
+                // 画面表示も最新状態に更新する
+                renderCart();
+            }
+        });
+
+
+        // -----------------------------------
+        // 9. ページを開いたときに最初の表示を行う
+        // -----------------------------------
+        renderCart();
+    </script>
 </body>
+

@@ -1,12 +1,14 @@
 [
   {
     "productId": "P001",
-    "productName": "オイル",
-    "price": 5000
+    "productName": "ヘアオイル（シトラス）",
+    "price": 3200,
+    "image":"assets/img/product_citrus.jpg"
   },
   {
     "productId": "P002",
-    "productName": "化粧水",
-    "price": 3000
+    "productName": "ヘアオイル（フローラル）",
+    "price": 3200,
+    "image":"assets/img/product_floral.jpg"
   }
 ]

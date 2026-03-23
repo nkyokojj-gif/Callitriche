@@ -23,98 +23,109 @@
 
 <body>
     <header class="header">
-        <div class="heaer flex">
-            <h1 class="header__title title">Callitriche</h1>
+        <div class="header__flex flex">
+            <h1 class="header__title title"><a href="top.html#">Callitriche</a></h1>
             <nav class="nav">
                 <ul class="header__nav">
-                    <li class="header__nav--list"><a href="#">ホーム</a></li>
-                    <li class="header__nav--list"><a href="#">お悩み</a></li>
-                    <li class="header__nav--list"><a href="#product">商品</a></li>
-                    <li class="header__nav--list"><a href="#explanation">商品の特徴</a></li>
-                    <li class="header__nav--list"><a href="#">使用方法</a></li>
-                    <li class="header__nav--list"><a href="#component">成分表示</a></li>
+                    <li class="header__nav--list"><a href="top.html#">ホーム</a></li>
+                    <li class="header__nav--list"><a href="top.html#product">商品</a></li>
+                    <li class="header__nav--list"><a href="top.html#explanation">商品の特徴</a></li>
+                    <li class="header__nav--list"><a href="top.html#">使用方法</a></li>
+                    <li class="header__nav--list"><a href="top.html#component">成分表示</a></li>
                 </ul>
             </nav>
         </div>
+
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="top.html#">ホーム</a></li>
+                    <li><a href="top.html#product">商品</a></li>
+                    <li><a href="top.html#explanation#">商品の特徴</a></li>
+                    <li><a href="top.html#use">使用方法</a></li>
+                    <li><a href="top.html#component">成分表示</a></li>
+                </ul>
+            </div>
+            <div class="background-image"></div>
+        </div>
     </header>
     <main>
-        <div class="flex">
-            <h2 class="cart__title">カート内情報</h2>
-            <div>
-                <p>商品</p>
-                <p>個数</p>
-                <p>値段</p>
+        <h2 class="cart__title title">カート内情報</h2>
+        <div class="inner">
+            <div class="checkout__flex flex">
+                <div class="checkout"><img id="checkoutImg" src="" alt="商品の写真" style="width:300px;"></div>
+                <div class="checkout__wrapper">
+                    <p>商品名: <span id="checkoutName"></span></p>
+                    <p>個数: <span id="checkoutQty"></span></p>
+                    <p>小計: <span id="checkoutPrice"></span>円</p>
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="" alt="カートに入れた商品の写真">
-            <p>商品</p>
-            <p>個数</p>
-            <p>値段</p>
-        </div>
-        <div class="buy">
-            <h2 class="buy__title">購入者情報の入力</h2>
-            <div class="form__item">
-                <form action="#" method="post" class="form__container">
-                    <dl class="form">
-                        <dt>
-                            <label for="name" class="required">お名前</label>
-                        </dt>
-                        <dd>
-                            <input type="text" id="name" name="your-name" placeholder="例）田中 花子">
-                        </dd>
-                        <dt>
-                            <label for="postnum" class="required">郵便番号</label>
-                        </dt>
-                        <dd>
-                            <input type="text" id="postnum" name="your-postnum" placeholder="例）000">
-                            <input type="text" id="postnum" name="your-postnum" placeholder="例）0000">
-                        </dd>
-                        <dt>
-                            <label for="adress" class="required">住所</label>
-                        </dt>
-                        <dd>
-                            都道府県<input type="text" id="postnum" name="your-postnum">
-                        </dd>
-                        <dd>
-                            市区町村<input type="text" id="postnum" name="your-postnum">
-                        </dd>
-                        <dd>
-                            番地以降<input type="text" id="postnum" name="your-postnum">
-                        </dd>
-                        <dd>
-                            マンション・建物名<input type="text" id="postnum" name="your-postnum">
-                        </dd>
-                        <dt>
-                            <label for="tel" class="required">電話番号</label>
-                        </dt>
-                        <dd>
-                            <input type="tel" id="tel" name="your-tel" placeholder="00000000000">
-                        </dd>
-                        <dt>
-                            <label for="email" class="required">メールアドレス</label>
-                        </dt>
-                        <dd>
-                            <input type="email" id="email" name="your-email" placeholder="hanako@">
-                        </dd>
-                        <dt>
-                            <label for="payment">支払い方法</label>
-                        </dt>
-                        <dd>
-                            <input type="radio" id="payment" name="payment" value="card">クレジットカード
-                        </dd>
-                        <dd>
-                            <input type="radio" id="payment" name="payment" value="bank">銀行振込
-                        </dd>
-                        <dd>
-                            <input type="radio" id="payment" name="payment" value="convenience">コンビニ支払い
-                        </dd>
-                    </dl>
-                    <div class="form__btn">
-                        <a href="cart.html" class="form__btn--back btn">前の画面に戻る</a>
-                        <input type="submit" value="注文を確定する" class="form__btn--check">
-                    </div>
-                </form>
+            <div class="buy">
+                <h2 class="buy__title">購入者情報の入力</h2>
+                <div class="form__item">
+                    <form action="#" method="post" class="form__container">
+                        <dl class="form">
+                            <dt>
+                                <label for="name" class="required">お名前</label>
+                            </dt>
+                            <dd>
+                                <input type="text" id="name" name="your-name" placeholder="例）田中 花子">
+                            </dd>
+                            <dt>
+                                <label for="postnum" class="required">郵便番号</label>
+                            </dt>
+                            <dd>
+                                <input type="text" id="postnum" name="your-postnum" placeholder="例）000">
+                                <input type="text" id="postnum" name="your-postnum" placeholder="例）0000">
+                            </dd>
+                            <dt>
+                                <label for="adress" class="required">住所</label>
+                            </dt>
+                            <dd>
+                                都道府県<input type="text" id="postnum" name="your-postnum">
+                            </dd>
+                            <dd>
+                                市区町村<input type="text" id="postnum1" name="your-postnum">
+                            </dd>
+                            <dd>
+                                番地以降<input type="text" id="postnum2" name="your-postnum">
+                            </dd>
+                            <dd>
+                                マンション・建物名<input type="text" id="postnum3" name="your-postnum">
+                            </dd>
+                            <dt>
+                                <label for="tel" class="required">電話番号</label>
+                            </dt>
+                            <dd>
+                                <input type="tel" id="tel" name="your-tel" placeholder="00000000000">
+                            </dd>
+                            <dt>
+                                <label for="email" class="required">メールアドレス</label>
+                            </dt>
+                            <dd>
+                                <input type="email" id="email" name="your-email" placeholder="hanako@">
+                            </dd>
+                            <dt>
+                                <label for="payment">支払い方法</label>
+                            </dt>
+                            <dd>
+                                <label><input type="radio" id="payment" name="payment" value="card">クレジットカード</label>
+                            </dd>
+                            <dd>
+                                <label><input type="radio" id="payment" name="payment" value="bank">銀行振込</label>
+                            </dd>
+                            <dd>
+                                <label><input type="radio" id="payment" name="payment" value="convenience">コンビニ支払い</label>
+                            </dd>
+                        </dl>
+                        <div class="form__btn">
+                            <a href="cart.html" class="form__btn--back btn">前の画面に戻る</a>
+                            <a href="complete.html" class="form__btn--check btn">注文を確定する</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -124,19 +135,31 @@
         <nav>
             <div class="footer flex">
                 <ul>
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">お悩み</a></li>
-                    <li><a href="#">商品</a></li>
+                    <li class="footer__list"><a href="top.html#">ホーム</a></li>
+                    <li class="footer__list"><a href="top.html#product">商品</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">商品の特徴</a></li>
-                    <li><a href="#">使用方法</a></li>
-                    <li><a href="#">成分表示</a></li>
+                    <li class="footer__list"><a href="top.html#explanation">商品の特徴</a></li>
+                    <li class="footer__list"><a href="top.html#use">使用方法</a></li>
+                    <li class="footer__list"><a href="top.html#component">成分表示</a></li>
                 </ul>
+            </div>
         </nav>
         <div class="copyright">
             <small class="copyright-text">©Callitriche</small>
         </div>
 
     </footer>
+
+    <script>
+    const STORAGE_KEY = "goodsOrder";
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+    if (data) {
+        document.getElementById("checkoutImg").src = data.image;
+        document.getElementById("checkoutName").textContent = data.productName;
+        document.getElementById("checkoutQty").textContent = data.quantity;
+        document.getElementById("checkoutPrice").textContent = data.price * data.quantity;
+    }
+</script>
 </body>
