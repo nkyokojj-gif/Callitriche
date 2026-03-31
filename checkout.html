@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callitriche</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="assets/css/pages/top.css">
-    <link rel="stylesheet" href="assets/css/pages/cart.css">
+    <link rel="stylesheet" href="assets/css/base/common.css">
     <link rel="stylesheet" href="assets/css/pages/checkout.css">
     <link rel="shortcut icon" href="assets/img/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,10 +23,10 @@
 <body>
     <header class="header">
         <div class="header__flex flex">
-            <h1 class="header__title title"><a href="top.html#">Callitriche</a></h1>
+            <h1 class="header__title title"><a href="top.html">Callitriche</a></h1>
             <nav class="nav">
                 <ul class="header__nav">
-                    <li class="header__nav--list"><a href="top.html#">ホーム</a></li>
+                    <li class="header__nav--list"><a href="top.html">ホーム</a></li>
                     <li class="header__nav--list"><a href="top.html#product">商品</a></li>
                     <li class="header__nav--list"><a href="top.html#explanation">商品の特徴</a></li>
                     <li class="header__nav--list"><a href="top.html#">使用方法</a></li>
@@ -41,9 +40,9 @@
             <label for="menu-btn-check" class="menu-btn"><span></span></label>
             <div class="menu-content">
                 <ul>
-                    <li><a href="top.html#">ホーム</a></li>
+                    <li><a href="top.html">ホーム</a></li>
                     <li><a href="top.html#product">商品</a></li>
-                    <li><a href="top.html#explanation#">商品の特徴</a></li>
+                    <li><a href="top.html#explanation">商品の特徴</a></li>
                     <li><a href="top.html#use">使用方法</a></li>
                     <li><a href="top.html#component">成分表示</a></li>
                 </ul>
@@ -52,7 +51,7 @@
         </div>
     </header>
     <main>
-        <h2 class="cart__title title">カート内情報</h2>
+        <h2 class="cart__title title">カート</h2>
         <div class="inner">
             <div class="checkout__flex flex">
                 <div class="checkout"><img id="checkoutImg" src="" alt="商品の写真" style="width:300px;"></div>
@@ -81,19 +80,19 @@
                                 <input type="text" id="postnum" name="your-postnum" placeholder="例）0000">
                             </dd>
                             <dt>
-                                <label for="adress" class="required">住所</label>
+                                <label for="address" class="required">住所</label>
                             </dt>
                             <dd>
                                 都道府県<input type="text" id="postnum" name="your-postnum">
                             </dd>
                             <dd>
-                                市区町村<input type="text" id="postnum1" name="your-postnum">
+                                市区町村<input type="text" id="postnum1" name="your-postnum1">
                             </dd>
                             <dd>
-                                番地以降<input type="text" id="postnum2" name="your-postnum">
+                                番地以降<input type="text" id="postnum2" name="your-postnum2">
                             </dd>
                             <dd>
-                                マンション・建物名<input type="text" id="postnum3" name="your-postnum">
+                                マンション・建物名<input type="text" id="postnum3" name="your-postnum3">
                             </dd>
                             <dt>
                                 <label for="tel" class="required">電話番号</label>
@@ -108,16 +107,16 @@
                                 <input type="email" id="email" name="your-email" placeholder="hanako@">
                             </dd>
                             <dt>
-                                <label for="payment">支払い方法</label>
+                                <div class="payment">支払い方法</div>
                             </dt>
                             <dd>
-                                <label><input type="radio" id="payment" name="payment" value="card">クレジットカード</label>
+                                <label><input type="radio" id="payment1" name="payment" value="card">クレジットカード</label>
                             </dd>
                             <dd>
-                                <label><input type="radio" id="payment" name="payment" value="bank">銀行振込</label>
+                                <label><input type="radio" id="payment2" name="payment" value="bank">銀行振込</label>
                             </dd>
                             <dd>
-                                <label><input type="radio" id="payment" name="payment" value="convenience">コンビニ支払い</label>
+                                <label><input type="radio" id="payment3" name="payment" value="convenience">コンビニ支払い</label>
                             </dd>
                         </dl>
                         <div class="form__btn">
@@ -135,7 +134,7 @@
         <nav>
             <div class="footer flex">
                 <ul>
-                    <li class="footer__list"><a href="top.html#">ホーム</a></li>
+                    <li class="footer__list"><a href="top.html">ホーム</a></li>
                     <li class="footer__list"><a href="top.html#product">商品</a></li>
                 </ul>
                 <ul>
