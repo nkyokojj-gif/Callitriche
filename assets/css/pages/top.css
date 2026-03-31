@@ -59,7 +59,6 @@ ul {
 
 .title{
     font-size: 40px;
-    padding: 50px 0px;
     text-align: center;
 }
 
@@ -89,6 +88,19 @@ button:hover {
     transform: translateY(-2px);
 }
 
+.section{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* 画面の一番上で止まるように設定 */
+    height: 100vh; /* 各セクションを全画面表示にする（推奨） */
+    width: 100%;
+    overflow: hidden;
+}
+
+.sub__title{
+    color: darkgray;
+    font-size: 26px;
+}
 
 
 
@@ -103,6 +115,7 @@ button:hover {
 
 .header__title a{
     font-size: 30px;
+    padding: 0 10px;
 }
 
 .header .flex{
@@ -334,12 +347,13 @@ button:hover {
     color: #F2F0EB;
     z-index: 15;
     font-size: 40px;
+    letter-spacing: 0.1em;
 }
 
 .main-text{
     width: 90%;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: #F2F0EB;
@@ -356,7 +370,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: 0.6s;
 }
@@ -379,9 +393,14 @@ button:hover {
 }
 
 .mv-spacer {
-    height: 110vh; /* この数値分だけ、MVが固定されたままスクロールします */
+    height: 100vh; /* この数値分だけ、MVが固定されたままスクロールします */
     position: relative;
     z-index: 5;
+}
+
+.wrapper{
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -448,10 +467,10 @@ button:hover {
 
 
 /* 商品 */
-.product{
+#product{
     width: 100%;
-    position: sticky;
     z-index: 10;
+    padding-bottom:100px ;
 }
 
 .product__flex{
@@ -460,6 +479,9 @@ button:hover {
     justify-content: center;
 }
 
+.product__img{
+    margin: 0px;
+}
 
 .product__img img{
     width: 100%;
@@ -467,10 +489,13 @@ button:hover {
     object-fit: contain;
 }
 
+.product-category{
+    text-align: center;
+}
+
 
 .product__content{
     flex-grow: 1;
-    margin-bottom: 50px;
 }
 
 .product__content p{
@@ -493,9 +518,13 @@ button:hover {
 
 
 /* 商品の特徴 */
-.explanation{
-    width: 100%;
-    position: sticky;
+#explanation{
+    width: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+    display: flow-root;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .explanation__text{
@@ -504,9 +533,19 @@ button:hover {
 
 .swiper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 500px;
   position: relative;
+}
+
+.swiper-slide {
+    /* ここで1枚のサイズを決める。80%にすると、左右に10%ずつチラ見えします */
+    opacity: 0.5;  /* 中央以外を少し薄くするとより綺麗です */
+    transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+    opacity: 1;
 }
 
 .swiper-slide p{
@@ -515,7 +554,7 @@ button:hover {
 
 
 .swiper-slide img{
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
@@ -542,8 +581,15 @@ button:hover {
 /* 使用方法 */
 /* --- 使用方法セクション全体の調整 --- */
 .use-section {
-    padding: 100px 0;
-    background-color: #F2F0EB; /* サイト全体の背景色に合わせる */
+    background-color: #5F736C;
+    z-index: 4;
+    width: 100%;
+    padding-bottom:100px ;
+    display: flow-root;
+}
+
+.use__title{
+    color:#D8A4A4;
 }
 
 .steps-container {
@@ -559,7 +605,7 @@ button:hover {
 .step-card {
     flex: 1;
     max-width: 320px;
-    background-color: #1F4034; /* ヘッダーと同じ深緑 */
+    background-color: #1F4034;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -606,8 +652,8 @@ button:hover {
 }
 
 .step-number {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     background-color: #D8A4A4; /* アクセントカラーのくすんだピンク */
     color: #1F4034;
     border-radius: 50%;
@@ -620,8 +666,8 @@ button:hover {
 
 .step-title {
     margin: 0;
-    font-size: 1.2rem;
-    color: #D8A4A4; /* ピンクをタイトルに */
+    font-size: 22px;
+    color: #D8A4A4;
     font-family: "Noto Serif JP", serif;
 }
 
@@ -646,8 +692,13 @@ button:hover {
 
 /* 成分 */
 #component{
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    background-color: #FFF;
+    margin-top: 0; /* 余計なマージンをリセット */
+    padding-top: 0; /* 上のセクションとの間隔を詰めたい場合 */
+    display: flow-root;
 }
+
 /* --- 成分情報アコーディオン --- */
 .component__container {
     max-width: 1080px;
@@ -728,11 +779,17 @@ button:hover {
 /* 商品購入セクション */
 .productsec{
     width: 100%;
-    margin-bottom: 80px;
+    padding: 100px;
 }
 
+.productsec.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
 .productsec__img{
-    margin-bottom:50px ;
     align-items: center;
 }
 
@@ -740,15 +797,22 @@ button:hover {
     width: 100%;
     height: 500px;
     object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .productsec__content{
     text-align: center;
 }
 
+.product-price,
+.product-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
-.productsec__img{
-    display: block;
+.productsec.flex{
+    gap: 50px;
 }
 
 .productsec__img img{

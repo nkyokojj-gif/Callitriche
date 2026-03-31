@@ -2,8 +2,9 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-  centeredSlides: true,
-  slidesPerView: 1.7,
+  // centeredSlides: true,
+  slidesPerView: 1.4,
+  spaceBetween: 20,
   loopedSlides: 3,
   autoplay: {
     delay:6000

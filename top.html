@@ -30,7 +30,7 @@
 
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <label for="menu-btn-check" class="menu-btn"><span ></span></label>
             <div class="menu-content">
                 <ul>
                     <li><a href="#">ホーム</a></li>
@@ -46,7 +46,7 @@
 
     <main>
         <div class="mv-container">
-            <div class="main-visual">
+            <section class="main-visual">
                 <div class="main-img"><img src="assets/img/ingmar-qGzd3axRSF4-unsplash.jpg" alt="カリトリケ">
                     <p class="catchcopy">Be yourself; everyone else is already taken.</p>
                 </div>
@@ -68,174 +68,181 @@
                         <p class="profile__text" data-aos="fade-up" data-aos-duration="200" data-aos-anchor="#trigger-1">自然派オイルとまるでアロマのような安らぐ香りで、あなたの心も髪も癒せますように。</p>
                     </section>
                 </div>
-            </div>
+            </section>
         </div>
         <div id="trigger-1" style="position: absolute; top: 50vh;"></div>
         <div class="mv-spacer"></div>
 
-        <div class="inner">
-            <div id="product">
-                <h2 class="product__title title">製品</h2>
-                <div id="result"></div>
-                    <div class="product__flex">
-                        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                            <div class="product__img">
-                                <img src="assets/img/product_citrus.jpg" alt="ヘアオイル（シトラス）">
-                                <div class="product__content">
-                                    <p>ヘアオイル</p>
-                                    <p>カリトリケ　ヘアオイル（シトラス）</p>
-                                    <p>本体　￥3200（税込）</p>
-                                    <p>160mL</p>
-                                    <button class="productImage" data-index="0">購入する</button>
+            <div class="wrapper">
+                <section id="product">
+                    <div class="inner">
+                        <h2 class="product__title title">製品<span class="sub__title"><br>-Product-</span></h2>
+                        <div id="result"></div>
+                            <div class="product__flex">
+                                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="product__img">
+                                        <img src="assets/img/product_citrus.jpg" alt="ヘアオイル（シトラス）">
+                                        <div class="product__content">
+                                            <p class="product-category">HAIR CARE</p>
+                                            <p class="product-name">カリトリケ　ヘアオイル（シトラス）</p>
+                                            <p class="product-price">￥3200（税込）/160mL</p>
+                                            <p class="product-description">
+                                            自然由来100%。忙しさの中で自分を整える、至福の一滴シリーズ。<br>
+                                            特に髪のまとまりにくさや広がりが気になる方向け。
+                                            </p>
+                                            <button class="productImage" data-index="0">購入する</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="product__img">
+                                        <img src="assets/img/product_floral.jpg" alt="ヘアオイル（フローラル）">
+                                        <div class="product__content">
+                                        <p class="product-category">HAIR CARE</p>
+                                        <p class="product-name">カリトリケ　ヘアオイル（フローラル）</p>
+                                        <p class="product-price">￥3200（税込）/160mL</p>
+                                        <p class="product-description">
+                                        自然由来100%。忙しさの中で自分を整える、至福の一滴シリーズ。<br>
+                                        特にダメージによるパサつきが気になる方向け。
+                                        </p>
+                                        <button class="productImage" data-index="1">購入する</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                            <div class="product__img">
-                                <img src="assets/img/product_floral.jpg" alt="ヘアオイル（フローラル）">
-                                <div class="product__content">
-                                    <p>ヘアオイル</p>
-                                    <p>カリトリケ　ヘアオイル（フローラル）</p>
-                                    <p>本体　￥3200（税込）</p>
-                                    <p>160mL</p>
-                                    <button class="productImage" data-index="1">購入する</button>
+                    </div>
+                </section>
+                <section id="explanation">
+                    <h3 class="explanation__title title">商品の特徴<span class="sub__title"><br>-Feature-</span></h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                    <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <p>自然由来の原料を使用し髪を保湿し、潤いと艶を与える</p>
+                                <img src="assets/img/blackieshoot-vfe8ICuwMeI-unsplash_2.jpg" >
+                            </div>
+                            <div class="swiper-slide">
+                                <p>摩擦や紫外線から髪を保護する</p>
+                                <img src="assets/img/masiha-olfi-CxsH6E9lqCo-unsplash_2.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>爽やかな果物の香りと癒しのフローラルの香りでストレスの軽減、リラックスを促す</p>
+                                <img src="assets/img/kathryn-aleksa-O8jFliG2rCI-unsplash (1)_2.jpg">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </section>
+                <section id="use" class="use-section">
+                    <h3 class="use__title title">使用方法<span class="sub__title"><br>-How to use-</h3>
+                    <div class="steps-container">
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card-content">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/pexels-shiny-diamond-3762879.jpg" alt="手に取る" class="step-image">
                                 </div>
+                                <div class="text-meta">
+                                    <div class="step-number">1</div>
+                                    <h4 class="step-title">手に取る</h4>
+                                </div>
+                                <p class="step-description">500円玉ほどの大きさを手に取り、タオルドライした髪になじませます。</p>
                             </div>
                         </div>
-                    </div>
-            </div>
-            <section id="explanation">
-                <h3 class="explanation__title title">商品の特徴</h3>
-                <!-- Slider main container -->
-                <div class="swiper">
-                <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <p>自然由来の原料を使用し髪を保湿し、潤いと艶を与える</p>
-                            <img src="assets/img/blackieshoot-vfe8ICuwMeI-unsplash_2.jpg" >
-                        </div>
-                        <div class="swiper-slide">
-                            <p>摩擦や紫外線から髪を保護する</p>
-                            <img src="assets/img/masiha-olfi-CxsH6E9lqCo-unsplash_2.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <p>爽やかな果物の香りと癒しのフローラルの香りでストレスの軽減、リラックスを促す</p>
-                            <img src="assets/img/kathryn-aleksa-O8jFliG2rCI-unsplash (1)_2.jpg">
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </section>
-            <section id="use" class="use-section">
-                <h3 class="explanation__title title">使用方法</h3>
-                <div class="steps-container">
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-content">
-                            <div class="image-wrapper">
-                                <img src="assets/img/pexels-shiny-diamond-3762879.jpg" alt="手に取る" class="step-image">
-                            </div>
-                            <div class="text-meta">
-                                <div class="step-number">1</div>
-                                <h4 class="step-title">手に取る</h4>
-                            </div>
-                            <p class="step-description">500円玉ほどの大きさを手に取り、タオルドライした髪になじませます。</p>
-                        </div>
-                    </div>
 
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card-content">
-                            <div class="image-wrapper">
-                                <img src="assets/img/24398600_m.jpg" alt="なじませる" class="step-image">
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="card-content">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/24398600_m.jpg" alt="なじませる" class="step-image">
+                                </div>
+                                <div class="text-meta">
+                                    <div class="step-number">2</div>
+                                    <h4 class="step-title">髪になじませる</h4>
+                                </div>
+                                <p class="step-description">毛先など時に気になる部分を中心に、髪全体に使用してください。</p>
                             </div>
-                            <div class="text-meta">
-                                <div class="step-number">2</div>
-                                <h4 class="step-title">髪になじませる</h4>
+                        </div>
+
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="card-content">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/charlesdeluvio-cqtL1sCTlJY-unsplash.jpg" alt="乾かす" class="step-image">
+                                </div>
+                                <div class="text-meta">
+                                    <div class="step-number">3</div>
+                                    <h4 class="step-title">乾かす</h4>
+                                </div>
+                                <p class="step-description">ドライヤーの風を上から下へ当てて、しっかりと乾かします。最後に冷風をあてるとよりまとまりが出ます</p>
                             </div>
-                            <p class="step-description">毛先など時に気になる部分を中心に、髪全体に使用してください。</p>
                         </div>
                     </div>
+                </section>
 
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="700">
-                        <div class="card-content">
-                            <div class="image-wrapper">
-                                <img src="assets/img/charlesdeluvio-cqtL1sCTlJY-unsplash.jpg" alt="乾かす" class="step-image">
+                <section id="component">
+                    <h3 class="component__title title">成分情報<span class="sub__title"><br>-Component-</span></h3>
+                    <div class="component__container">
+                        <details class="component__details">
+                            <summary class="component__summary">商品情報</summary>
+                            <div class="component__content">
+                                <dl class="info-list">
+                                    <dt>商品名</dt><dd>カリトリケ ヘアオイル</dd>
+                                    <dt>種類</dt><dd>ヘアオイル</dd>
+                                    <dt>内容量</dt><dd>160mL</dd>
+                                </dl>
                             </div>
-                            <div class="text-meta">
-                                <div class="step-number">3</div>
-                                <h4 class="step-title">乾かす</h4>
+                        </details>
+
+                        <details class="component__details">
+                            <summary class="component__summary">成分</summary>
+                            <div class="component__content">
+                                <p>ジメチコン、水添ファルネセン、ホホバ種子油、アルガニアスピノサ核油、香料トコフェロール</p>
                             </div>
-                            <p class="step-description">ドライヤーの風を上から下へ当てて、しっかりと乾かします。最後に冷風をあてるとよりまとまりが出ます</p>
+                        </details>
+
+                        <details class="component__details">
+                            <summary class="component__summary">ご使用上の注意</summary>
+                            <div class="component__content">
+                                <p>お肌に異常が生じていないかよく注意して使用してください。化粧品がお肌に合わないときは、使用を中止してください。</p>
+                                <ul class="caution-list">
+                                    <li>(1) 使用中、赤み、はれ、かゆみ、刺激、色抜け（白斑等）や黒ずみ等の異常があらわれた場合</li>
+                                    <li>(2) 使用したお肌に、直射日光があたって上記のような異常があらわれた場合</li>
+                                </ul>
+                                <p>傷やはれもの、しっしん等、異常のある部位にはお使いにならないでください。</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="productsec flex">
+                    <div class="productsec__img">
+                        <img src="assets/img/product_citrus.jpg" alt="ヘアオイル（シトラス）">
+                        <div class="productsec__content">
+                            <span class="product-category">HAIR CARE</span>
+                            <p class="product-name">カリトリケ　ヘアオイル（シトラス）</p>
+                            <p class="product-price">￥3200（税込）/160mL</p>
+                            <p class="product-description">
+                            自然由来100%。忙しさの中で自分を整える、至福の一滴シリーズ。<br>
+                            特に髪のまとまりにくさや広がりが気になる方向け。
+                            </p>
+                            <button class="productImage" data-index="0">購入する</button>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="component">
-                <h3 class="component__title title">成分情報</h3>
-                <div class="component__container">
-                    <details class="component__details">
-                        <summary class="component__summary">商品情報</summary>
-                        <div class="component__content">
-                            <dl class="info-list">
-                                <dt>商品名</dt><dd>カリトリケ ヘアオイル</dd>
-                                <dt>種類</dt><dd>ヘアオイル</dd>
-                                <dt>内容量</dt><dd>160mL</dd>
-                            </dl>
+                    <div class="productsec__img">
+                            <img src="assets/img/product_floral.jpg" alt="ヘアオイル（フローラル）">
+                        <div class="productsec__content">
+                            <span class="product-category">HAIR CARE</span>
+                            <p class="product-name">カリトリケ　ヘアオイル（フローラル）</p>
+                            <p class="product-price">￥3200（税込）/160mL</p>
+                            <p class="product-description">
+                            自然由来100%。忙しさの中で自分を整える、至福の一滴シリーズ。<br>
+                            特にダメージによるパサつきが気になる方向け。
+                            </p>
+                            <button class="productImage" data-index="1">購入する</button>
                         </div>
-                    </details>
-
-                    <details class="component__details">
-                        <summary class="component__summary">成分</summary>
-                        <div class="component__content">
-                            <p>ジメチコン、水添ファルネセン、ホホバ種子油、アルガニアスピノサ核油、香料トコフェロール</p>
-                        </div>
-                    </details>
-
-                    <details class="component__details">
-                        <summary class="component__summary">ご使用上の注意</summary>
-                        <div class="component__content">
-                            <p>お肌に異常が生じていないかよく注意して使用してください。化粧品がお肌に合わないときは、使用を中止してください。</p>
-                            <ul class="caution-list">
-                                <li>(1) 使用中、赤み、はれ、かゆみ、刺激、色抜け（白斑等）や黒ずみ等の異常があらわれた場合</li>
-                                <li>(2) 使用したお肌に、直射日光があたって上記のような異常があらわれた場合</li>
-                            </ul>
-                            <p>傷やはれもの、しっしん等、異常のある部位にはお使いにならないでください。</p>
-                        </div>
-                    </details>
-                </div>
-            </section>
-
-            <div class="productsec">
-                <div class="productsec__img">
-                    <img src="assets/img/product_citrus.jpg" alt="ヘアオイル（シトラス）">
-                    <div class="productsec__content">
-                        <span class="product-category">HAIR CARE</span>
-                        <p>カリトリケ　ヘアオイル（シトラス）</p>
-                        <pclass="product-price">￥3200（税込）</p>
-                        <p class="product-description">
-                    自然由来100%。忙しさの中で自分を整える、至福の一滴。<br>
-                    ベタつかず、内側から潤う艶髪へ導きます。
-                        </p>
-                        <p>160mL</p>
-                        <button class="productImage" data-index="0">購入する</button>
                     </div>
-                </div>
-                <div class="productsec__img">
-                        <img src="assets/img/product_floral.jpg" alt="ヘアオイル（フローラル）">
-                    <div class="productsec__content">
-                        <span class="product-category">HAIR CARE</span>
-                        <p>カリトリケ　ヘアオイル（フローラル）</p>
-                        <pclass="product-price">￥3200（税込）</p>
-                        <p class="product-description">
-                    自然由来100%。忙しさの中で自分を整える、至福の一滴。<br>
-                    ベタつかず、内側から潤う艶髪へ導きます。
-                        </p>
-                        <p>160mL</p>
-                        <button class="productImage" data-index="1">購入する</button>
-                    </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>

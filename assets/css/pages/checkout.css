@@ -366,10 +366,9 @@ input[name="your-postnum"] {
 
 .form__btn{
     display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
 }
-
-
-
 
 
 .form__btn--check{
@@ -384,6 +383,47 @@ input[name="your-postnum"] {
     text-align: center;
     margin: 0 auto;
     cursor: pointer;
+    align-self: center;
+}
+
+.form__btn--back{
+    display: flex;
+    align-items: center;
+    color: #333; /* 文字色は読みやすく */
+    font-size: 18px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.form__btn--back:hover{
+    opacity: 0.7;
+}
+
+.arrow-circle {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: #1F4034;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.arrow-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%; /* 中央より少し右から配置 */
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #F2F0EB;
+    border-left: 2px solid #F2F0EB;
+    transform: translate(-50%, -50%) rotate(-45deg); /* 左向き矢印に回転 */
+}
+
+@media (max-width: 768px) {
+    .form__btn {
+        align-items: center;
+    }
 }
 
 

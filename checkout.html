@@ -73,26 +73,32 @@
                                 <input type="text" id="name" name="your-name" placeholder="例）田中 花子">
                             </dd>
                             <dt>
-                                <label for="postnum" class="required">郵便番号</label>
+                                <label class="required">郵便番号</label>
                             </dt>
                             <dd>
-                                <input type="text" id="postnum" name="your-postnum" placeholder="例）000">
-                                <input type="text" id="postnum" name="your-postnum" placeholder="例）0000">
+                                <input type="text" id="postnum_fn" name="your-postnum" placeholder="例）000">
+                                <input type="text" id="postnum_ln" name="your-postnum" placeholder="例）0000">
                             </dd>
                             <dt>
-                                <label for="address" class="required">住所</label>
+                                <span class="required">住所</label>
                             </dt>
                             <dd>
-                                都道府県<input type="text" id="postnum" name="your-postnum">
-                            </dd>
-                            <dd>
-                                市区町村<input type="text" id="postnum1" name="your-postnum1">
-                            </dd>
-                            <dd>
-                                番地以降<input type="text" id="postnum2" name="your-postnum2">
-                            </dd>
-                            <dd>
-                                マンション・建物名<input type="text" id="postnum3" name="your-postnum3">
+                                <div class="address-item">
+                                    <label for="address_pref">都道府県</label>
+                                    <input type="text" id="address_pref" name="your-pref">
+                                </div>
+                                <div class="address-item">
+                                    <label for="address_city">市区町村</label>
+                                    <input type="text" id="address_city" name="your-city">
+                                </div>
+                                <div class="address-item">
+                                    <label for="address_street">番地以降</label>
+                                    <input type="text" id="address_street" name="your-street">
+                                </div>
+                                <div class="address-item">
+                                    <label for="address_building">マンション・建物名</label>
+                                    <input type="text" id="address_building" name="your-building">
+                                </div>
                             </dd>
                             <dt>
                                 <label for="tel" class="required">電話番号</label>
@@ -119,13 +125,15 @@
                                 <label><input type="radio" id="payment3" name="payment" value="convenience">コンビニ支払い</label>
                             </dd>
                         </dl>
-                        <div class="form__btn">
-                            <a href="cart.html" class="form__btn--back btn">前の画面に戻る</a>
-                            <a href="complete.html" class="form__btn--check btn">注文を確定する</a>
-                        </div>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="form__btn flex">
+            <a href="cart.html" class="form__btn--back">
+                <span class="arrow-circle"></span>前の画面に戻る
+            </a>
+            <a href="complete.html" class="form__btn--check btn">注文を確定する</a>
         </div>
 
 
