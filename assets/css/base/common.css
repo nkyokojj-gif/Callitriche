@@ -38,6 +38,7 @@ a {
 
 ul {
     list-style: none;
+    padding-inline-start: 0;
 }
 
 
@@ -107,6 +108,15 @@ button:hover {
     position: sticky;
     top: 0;
     z-index: 100;
+    height: 60px;
+    transition: background-color 0.4s ease; /* 変化を滑らかにする */
+}
+
+.header.is-scrolled {
+    /* 背景色をRGBAで指定して透過させる（最後の0.8が透明度） */
+    background-color: rgba(31, 64, 52, 0.7);
+    /* 背景をぼかすエフェクト（さらに高級感が出ます） */
+    backdrop-filter: blur(5px);
 }
 
 .header__title a{
@@ -118,9 +128,12 @@ button:hover {
     justify-content: space-between;
 }
 
-.header__flex{
-    padding: 0 10px;
+.header__flex {
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
 
 .header__title{
     color: #F2F0EB;
@@ -129,6 +142,7 @@ button:hover {
 
 .nav{
     justify-content: right;
+    height: 100%;
 }
 
 
@@ -139,6 +153,7 @@ button:hover {
 .header__nav--list{
     text-align: center;
     transition: all 0.6s;
+    margin: 10px;
 }
 
 .header__nav--list:hover{
@@ -146,15 +161,11 @@ button:hover {
     opacity: 0.6;
 }
 
-.header__nav--list a{
-    padding: 10px 24px;
-    display: block;
-}
-
 
 .hamburger-menu{
     display: none;
 }
+
 
 
 /* ハンバーガーメニュー */
@@ -317,18 +328,15 @@ button:hover {
 /* フッター */
 .footer{
     background-color: #1F4034;
-    margin: 0 auto;
-    justify-content: center;
     text-align: center;
 }
 
-.footer__flex{
-    align-items: center;
-    justify-content: center;
+.footer__nav{
+    display: inline-block;
 }
 
 .footer__list{
-    margin: 20px;
+    margin-bottom: 16px;
 }
 
 .copyright-text{
@@ -337,16 +345,10 @@ button:hover {
 
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    display: inline-block;
-    padding: 5px 0 5px;
     width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-    .flex{
-        display: block;
-    }
-
     .footer__list{
     padding: 10px;
     margin: 0;
@@ -362,3 +364,5 @@ button:hover {
         list-style: none;
     }
 }
+
+

@@ -45,11 +45,9 @@ ul {
     position: relative;
     max-width: 1080px;
     width: 100%;
-    margin: 0 auto;
-    z-index: 10;
+    margin-top: 0;
     background-color: #F2F0EB;
-    margin-top: -100vh;    /* 1画面分上に引き上げて、MVの後半部分に重ねる */
-    padding-top: 100px;    /* 重なった後の余白調整 */
+    z-index: 1;
 }
 
 .flex{
@@ -98,68 +96,14 @@ button:hover {
 }
 
 .sub__title{
-    color: darkgray;
+    color: #888;
     font-size: 26px;
+    font-weight: normal;
 }
 
 
 
-/* ヘッダー */
-.header{
-    width: 100%;
-    background-color: #1F4034;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
 
-.header__title a{
-    font-size: 30px;
-    padding: 0 10px;
-}
-
-.header .flex{
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header__flex{
-    padding: 0 10px;
-}
-
-.header__title{
-    color: #F2F0EB;
-    margin: 0;
-}
-
-.nav{
-    justify-content: right;
-}
-
-
-.header__nav{
-    display: flex;
-}
-
-.header__nav--list{
-    text-align: center;
-    transition: all 0.6s;
-}
-
-.header__nav--list:hover{
-    background-color:#5F736C;
-    opacity: 0.6;
-}
-
-.header__nav--list a{
-    padding: 10px 24px;
-    display: block;
-}
-
-
-.hamburger-menu{
-    display: none;
-}
 
 
 /* ハンバーガーメニュー */
@@ -323,26 +267,24 @@ button:hover {
 
 /* メインビジュアル */
 
-.mv-container {
-    height: 200vh; /* 2画面分の長さ。ここが長いほどMVが長く画面に留まります */
-    position: relative;
-    z-index: 1;
+.concept-section{
+    position: relative; /* 固定配置の背後に回らないようにする */ 
+    background-color: #F2F0EB; /* 下のセクションが透けないように背景色を指定 */
+    padding: 120px 0;   /* 上下にしっかり余白をとる */
+    text-align: center;
 }
 
 .main-visual{
     width: 100%;
     height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    position: relative;
     overflow: hidden;
 }
 
 .catchcopy{
     position: absolute;
-    top: 55%;   /* 上から50% */
-    left: 15%;  /* 左から10%（少し左寄せが今っぽいです） */
+    top: 50%;   /* 上から50% */
+    left: 20%;
     transform: translateY(-50%);
     color: #F2F0EB;
     z-index: 15;
@@ -350,19 +292,6 @@ button:hover {
     letter-spacing: 0.1em;
 }
 
-.main-text{
-    width: 90%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #F2F0EB;
-    opacity: 0;
-    transition: 0.6s;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
 
 .overlay{
     position: absolute;
@@ -371,19 +300,26 @@ button:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    opacity: 1;
+    z-index: 2;
     transition: 0.6s;
 }
 
 
 .main-img{
-    height: 100vh;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .main-img img{
     width: 100%;
     height: 100%;
     object-fit:cover;
+    display: block;
 }
 
 
@@ -392,16 +328,10 @@ button:hover {
   width: 100%;
 }
 
-.mv-spacer {
-    height: 100vh; /* この数値分だけ、MVが固定されたままスクロールします */
-    position: relative;
-    z-index: 5;
-}
-
 .wrapper{
     position: relative;
-    z-index: 10;
 }
+
 
 
 
@@ -409,8 +339,6 @@ button:hover {
 .promotion{
     width: 100%;
     position: relative;
-    padding-top: 0;
-    z-index: 5;
 }
 
 .promotion__title.title{
@@ -421,7 +349,7 @@ button:hover {
 .promotion__text{
     font-size: 20px;
     text-align: left;
-    color: #F2F0EB;
+    color: #333;
 }
 
 /* Callitricheについて */
@@ -429,7 +357,6 @@ button:hover {
     width: 100%;
     position: relative;
     padding-top: 0;
-    z-index: 5;
     display: flex;
     flex-direction: column; /* 縦に並べる（上がタイトル、下が本文） */
     align-items: flex-end;    /* 全体を右側に寄せる */
@@ -444,23 +371,9 @@ button:hover {
 .profile__text{
     font-size: 20px;
     text-align: left; /* 縦書きが右端に来るなら、本文は通常の左揃えでOK */
-    color: #F2F0EB;
-    color: #F2F0EB;
+    color: #333;
 }
 
-.sub-text{
-    width: 90%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #F2F0EB;
-    opacity: 0;
-    transition: 0.6s;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
 
 
 
@@ -469,7 +382,6 @@ button:hover {
 /* 商品 */
 #product{
     width: 100%;
-    z-index: 10;
     padding-bottom:100px ;
 }
 
@@ -481,10 +393,12 @@ button:hover {
 
 .product__img{
     margin: 0px;
+    text-align: center;
 }
 
 .product__img img{
     width: 100%;
+    max-width: 300px;
     height: 500px;
     object-fit: contain;
 }
@@ -519,7 +433,7 @@ button:hover {
 
 /* 商品の特徴 */
 #explanation{
-    width: 100vh;
+    width: 100%;
     position: relative;
     padding-bottom: 100px;
     display: flow-root;
@@ -534,14 +448,15 @@ button:hover {
 .swiper {
   width: 100%;
   max-width: 1400px;
-  height: 500px;
-  position: relative;
 }
 
 .swiper-slide {
     /* ここで1枚のサイズを決める。80%にすると、左右に10%ずつチラ見えします */
     opacity: 0.5;  /* 中央以外を少し薄くするとより綺麗です */
     transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .swiper-slide-active {
@@ -550,24 +465,23 @@ button:hover {
 
 .swiper-slide p{
     text-align: center;
+    opacity: 1 !important;  /* 強制的に表示 */
+    visibility: visible !important;
 }
 
 
 .swiper-slide img{
-    object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 400px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
     color: #5F736C;
     z-index: 10;
-}
-
-.explanation__img img{
-    margin-top: 20px;
-    height: 300px;
 }
 
 @media screen and (max-width: 768px) {
@@ -592,6 +506,12 @@ button:hover {
     color:#D8A4A4;
 }
 
+.sub__title--use{
+    color: #ccc;
+    font-size: 26px;
+    font-weight: normal;
+}
+
 .steps-container {
     display: flex;
     justify-content: center;
@@ -608,7 +528,6 @@ button:hover {
     background-color: #1F4034;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: default;
 }
 
@@ -619,6 +538,7 @@ button:hover {
     box-shadow:  0 0 20px rgba(255, 182, 193, 0.8),
                  0 0 40px rgba(255, 182, 193, 0.4);
     cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.4s ease;
 }
 
 /* --- 3️⃣ ステップ内の構造 --- */
@@ -699,6 +619,7 @@ button:hover {
     display: flow-root;
 }
 
+
 /* --- 成分情報アコーディオン --- */
 .component__container {
     max-width: 1080px;
@@ -719,7 +640,6 @@ button:hover {
     align-items: center;
     font-weight: bold;
     color: #333;
-    transition: background-color 0.3s;
 }
 
 .component__summary::-webkit-details-marker {
@@ -728,7 +648,7 @@ button:hover {
 
 /* 右側の▲マーク */
 .component__summary::after {
-    content: '▲';
+    content: '▼';
     font-size: 0.7rem;
     transition: transform 0.3s;
 }
@@ -739,28 +659,40 @@ button:hover {
 }
 
 .component__content {
+    max-height: 0;
     padding: 0 10px 30px;
     font-size: 0.9rem;
     line-height: 1.8;
     color: #555;
-    animation: fadeIn 0.5s ease; /* 開く時のふわっとしたアニメーション */
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 0.5秒かけて変化 */
+    opacity: 0;
 }
+
 
 /* アコーディオン内のリスト形式（商品情報用） */
 .info-list {
     display: grid;
     grid-template-columns: 120px 1fr;
     gap: 10px 0;
+    transition: all 1.5s ease;
 }
 
 .info-list dt {
     font-weight: normal;
-    color: #888;
+    color: #333;
+    font-size: 16px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+.info-list dd{
+    color: #333;
+    font-size: 16px;
+}
+
+.component__details.is-open .component__content {
+    max-height: 500px; /* 中身が収まる十分な高さ */
+    opacity: 1;
+    padding-bottom: 30px;
 }
 
 /* 注意書きリストのスタイル */
@@ -779,7 +711,7 @@ button:hover {
 /* 商品購入セクション */
 .productsec{
     width: 100%;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .productsec.flex{
@@ -790,14 +722,25 @@ button:hover {
 
 
 .productsec__img{
+    width: 100%;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .productsec__img img{
     width: 100%;
+    max-width: 300px;
     height: 500px;
     object-fit: contain;
     margin-bottom: 15px;
+    align-items: center;
+}
+
+.product-description{
+    margin:0;
+    margin-bottom: 20px;
 }
 
 .productsec__content{
@@ -822,51 +765,3 @@ button:hover {
 }
 }
 
-/* フッター */
-.footer{
-    background-color: #1F4034;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-}
-
-.footer__flex{
-    align-items: center;
-    justify-content: center;
-}
-
-.footer__list{
-    margin: 20px;
-}
-
-.copyright-text{
-    color: #F2F0EB;
-}
-
-.copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    display: inline-block;
-    padding: 5px 0 5px;
-    width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    .flex{
-        display: block;
-    }
-
-    .footer__list{
-    padding: 10px;
-    margin: 0;
-    }
-
-    .footer.flex{
-        margin: 0 auto;
-    }
-
-    .footer ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-}
