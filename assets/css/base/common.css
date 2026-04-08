@@ -47,9 +47,7 @@ ul {
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
-    z-index: 10;
     background-color: #F2F0EB;
-    margin-top: -100vh;    /* 1画面分上に引き上げて、MVの後半部分に重ねる */
     padding-top: 100px;    /* 重なった後の余白調整 */
 }
 
@@ -96,7 +94,12 @@ button:hover {
     transform: translateY(-2px);
 }
 
-
+.main-visual,
+.wrapper,
+section {
+    position: relative;
+    z-index: 1;
+}
 
 
 
@@ -107,7 +110,7 @@ button:hover {
     background-color: #1F4034;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 9999;
     height: 60px;
     transition: background-color 0.4s ease; /* 変化を滑らかにする */
 }
@@ -166,16 +169,25 @@ button:hover {
     display: none;
 }
 
+.background-image{
+    pointer-events: none;
+}
 
 
 /* ハンバーガーメニュー */
 @media screen and (max-width: 768px) {
 .header__title a{
-    font-size: 30px;
+    font-size: 26px;
 }
 
-.header-title{
+.header__title{
     text-align: center;
+}
+
+.header__title.title{
+    text-align: center;
+    padding: 0;
+    font-size: 26px;
 }
 
 .header__flex{
@@ -199,7 +211,7 @@ button:hover {
     width: 40px;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
     border-width: 1px #333;
 }
 
@@ -209,17 +221,17 @@ button:hover {
 .menu-btn span::after {
     content: '';
     display: block;
-    height: 1px;
+    height: 3px;
     width: 25px;
     border-radius: 3px;
-    background-color: #F2F0EB;
+    background-color: #333;
     position: absolute;
     transition: all 0.6s;
 }
 
 #menu-btn-check:checked ~ .menu-btn span::before,
 #menu-btn-check:checked ~ .menu-btn span::after {
-    background-color: #333;
+    background-color: #F2F0EB;
 }
 
 
@@ -249,16 +261,6 @@ button:hover {
     display: none;
 }
 
-.menu-content {
-    width: 240px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    z-index: 80;
-    background-color:#F2F0EB;
-    transition: all 0.6s;
-}
-
 .menu-content ul {
     margin-left: 30px;
     margin-top: 180px;
@@ -275,7 +277,7 @@ button:hover {
     font-size: 20px;
     font-weight: 400;
     box-sizing: border-box;
-    color:#333;
+    color:#F2F0EB;
     text-decoration: none;
     position: relative;
 }
@@ -296,13 +298,16 @@ button:hover {
     position: fixed;
     top: 0;
     right: -240px;/*leftの値を変更してメニューを画面外へ*/
-    background-color: #F2F0EB;
+    background-color: #5F736C;
+    z-index: 999;
     transition: all 0.6s;/*アニメーション設定*/
 }
 
 #menu-btn-check:checked ~ .menu-content {
     right: 0;/*メニューを画面内へ*/
 }
+
+
 
 #menu-btn-check:checked ~ .background-image{
     visibility: visible;
@@ -315,7 +320,6 @@ button:hover {
 	height: 100%;
 	top: 0;
 	left: 0;
-	z-index: 70;
 	background-color: rgba(63, 67, 74, 0.4);
     opacity: 0;
     visibility: hidden;
