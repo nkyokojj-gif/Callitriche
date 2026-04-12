@@ -17,6 +17,7 @@ body {
     line-height: 1.5;
     background-color: #F2F0EB;
     color: #333;
+    margin: 0;
 }
 
 img {
@@ -39,6 +40,7 @@ a {
 ul {
     list-style: none;
     padding-inline-start: 0;
+    margin: 0;
 }
 
 
@@ -48,7 +50,6 @@ ul {
     width: 100%;
     margin: 0 auto;
     background-color: #F2F0EB;
-    padding-top: 100px;    /* 重なった後の余白調整 */
 }
 
 .flex{
@@ -101,6 +102,15 @@ section {
     z-index: 1;
 }
 
+@media screen and (max-witdh:768px){
+    p{
+        font-size: 16px;
+    }
+    title{
+        font-size: 30px;
+    }
+}
+
 
 
 
@@ -141,6 +151,8 @@ section {
 .header__title{
     color: #F2F0EB;
     margin: 0;
+    font-size: 40px;
+    text-align: center;
 }
 
 .nav{
@@ -204,14 +216,14 @@ section {
 
 .menu-btn{
     position: fixed;
-    top: 100px;
-    right: 25px;
+    top: 9px;
+    right: 20px;
     display: flex;
     height: 40px;
     width: 40px;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
     border-width: 1px #333;
 }
 
@@ -293,12 +305,12 @@ section {
 }
 
 .menu-content {
-    width: 240px;
+    width: 200px;
     height: 100vh;
     position: fixed;
     top: 0;
-    right: -240px;/*leftの値を変更してメニューを画面外へ*/
-    background-color: #5F736C;
+    right: -200px;/*leftの値を変更してメニューを画面外へ*/
+    background-color: #5f736c;
     z-index: 999;
     transition: all 0.6s;/*アニメーション設定*/
 }
